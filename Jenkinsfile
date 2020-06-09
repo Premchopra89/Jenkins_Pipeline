@@ -20,7 +20,7 @@ pipeline {
                          }
                         }
                        }
-                 stage('Integration test){
+                 stage('Integration test'){
                        agent{
                            docker{
                                image 'ubuntu'
