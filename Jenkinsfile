@@ -17,8 +17,6 @@ pipeline {
                     steps {
                         echo 'Running Unit test'
                           }
-                         }
-                        }
                        }
                  stage('Integration test'){
                        agent{
@@ -26,9 +24,11 @@ pipeline {
                                image 'ubuntu'
                                  }
                             }
-                       
+                         }
                        steps {
                         echo 'Running Integration test'
                              }
-    }
-}
+                  }
+               }
+         }
+        }
