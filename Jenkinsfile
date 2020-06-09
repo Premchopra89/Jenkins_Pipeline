@@ -24,10 +24,11 @@ pipeline {
                                image 'ubuntu'
                                  }
                             }
-                         }
+                        
                        steps {
                         echo 'Running Integration test'
                              }
+                           }
                   }
                }
          }
