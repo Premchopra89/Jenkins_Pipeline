@@ -21,7 +21,7 @@ pipeline {
                  stage('Integration test'){
                        agent{
                            docker{
-                               image 'ubuntu'
+                               image 'openjdk'
                                  }
                             }
                         
