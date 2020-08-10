@@ -1,9 +1,11 @@
 pipeline {
     agent any
         stages {
-        stage('one') {
+        stage('build') {
             steps {
-                echo 'Hi, This is Prem'
+                withMaven(maven : Maven){
+                    sh 'mvn clean compile'
+                }
             }
         }
         stage('Two') {
@@ -18,12 +20,6 @@ pipeline {
                         echo 'Running Unit test'
                           }
                        }
-                 stage('Integration test'){
-                       agent{
-                           docker{
-                               image 'openjdk'
-                                 }
-                            }
                         
                        steps {
                         echo 'Running Integration test'
@@ -31,5 +27,4 @@ pipeline {
                            }
                   }
                }
-         }
         }
